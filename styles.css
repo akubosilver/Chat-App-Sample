@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+:root {
+    --white-color: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --light-magenta: hsl(289, 100%, 72%);
+    --bg-linear-gradient: linear-gradient(180deg, hsl(293, 100%, 63%) -50%, hsl(264, 100%, 61%));
+    --head-bg-linear-gradient: linear-gradient(90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    --price-bg-linear-gradient: linear-gradient(90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    --sub-heading-color: hsl(276, 100%, 81%);
+    --walker-chat-color: hsl(276, 55%, 52%);
+    --client-chat-color: hsl(271, 15%, 43%);
+    --placeholder-color: hsl(206, 6%, 79%);
+    --paragraph-color:  hsl(270, 7%, 64%);
+    --main-heading-color: hsl(271, 36%, 24%);
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--white-color);
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.phone-container {
+    position: relative;
+    user-select: none;
+}
+.purple-bg {
+    width: 70%;
+    height: 80%;
+    background: var(--bg-linear-gradient);
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    margin-left: -5em;
+}
+.phone {
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    padding: 0.5em;
+    top: 6em;
+    right: 20%;
+    background: var(--white-color);
+    box-shadow: 0 0 10px 10px rgba(0, 0 , 0, 0.1);
+    border-radius: 1em;
+}
+.avatar-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--head-bg-linear-gradient);
+    border-radius: 0.5em 0.5em 0.3em 0.3em;
+    padding: 1em 0;
+    position: relative;
+}
+.avatar-section span {
+    color: var(--white-color);
+    margin-top: 0.3em;
+}
+.avatar-section img {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+    margin-top: 0.5em;
+    margin-left: -0.8em;
+}
+.avatar-section::before {
+    content: '';
+    width: 60%;
+    height: 15px;
+    background: var(--white-color);
+    position: absolute;
+    top: 0;
+    left: 20%;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+.name-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: -0.8em;
+}
+.name-status h4,
+.name-status p {
+    margin: 0.3em 0 0;
+}
+.name {
+    color: var(--white-color);
+    font-size: 0.8em;
+}
+.status {
+    color: var(--light-grayish-violet);
+    font-size: 0.5em;
+}
+.dots {
+    transform: rotate(90deg);
+    margin-right: -0.5em;
+}
+.chat-bg {
+   background: rgba(0, 0, 0, 0.05);
+   position: relative; 
+   border-radius: 0.5em 0.5em 1em 1em;
+   margin-top: -0.05em;
+   padding-bottom: 0.05em;
+}
+.chat {
+    font-size: 0.6em;
+    word-wrap: break-word;
+}
+.walker {
+    height: 4em;
+    width: 75%;
+    font-size: 0.6em;
+    background: var(--sub-heading-color);
+    color: var(--walker-chat-color);
+    margin: 0.5em 0 0.2em 0.2em;
+    border-radius: 0.7em 0.7em 0.7em 0;
+    padding: 0.4em;
+}
+.images {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 0.5em;
+    gap: 0.3em;
+}
+.chat-bg img {
+    width: 25px;
+    height: 25px;
+    border-radius: 0.5em;
+}
+.chat-client {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.client {
+    height: 3em;
+    width: 75%;
+    font-size: 0.6em;
+    background: var(--white-color);
+    color: var(--client-chat-color);
+    margin: 0.3em 0.2em 0.2em 0;
+    border-radius: 0.7em 0.7em 0 0.7em;
+    padding: 0.4em;
+}
+.chat-price {
+    width: 80%;
+    height: 3em;
+    font-size: 0.6em;
+    background: var(--price-bg-linear-gradient);
+    color: var(--white-color);
+    margin: 0.4em 0 0.3em 0.2em;
+    border-radius: 0.7em 0.7em 0.7em 0;
+    padding: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    font-size: 1.5em;
+}
+.chat-box {
+    width: 96%;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.6em;
+    padding: 0.8em;
+    margin: 0.5em auto;
+    background: var(--white-color);
+    border-radius: 1000px;
+    color: var(--placeholder-color);
+}
+.send {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.booking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+.purple-bg-btm {
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--bg-linear-gradient);
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    margin-right: -5em;
+    opacity: 0.05;
+}
+.writing {
+    width: 70%;
+    position: absolute;
+    top: 30%;
+    left: 10%
+}
+.title {
+    color: var(--main-heading-color)
+}
+.subtitle {
+    font-size: 1em;
+    color: var(--paragraph-color);
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+}
+/* media queries */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, calc(100vh/2));
+    }
+    .purple-bg {
+        width: 100%;
+        margin-left: 0;
+    }
+    .phone {
+        right: 20%;
+    }
+    .purple-bg-btm {
+        width: 100%;
+        margin-right: 0;
+        left: 0;
+    }
+    .writing {
+        padding-left: 1em;
+    }
+}
+@media (max-width: 660px) {
+    .purple-bg {
+        width: 70%;
+        height: 100%;
+        margin-left: -5em;
+    }
+    .phone {
+        top: 5em;
+        right: 30%;
+    }
+    .writing  {
+        margin-top: 3.5em;
+    }
+    .subtitle {
+        line-height: 1.2;
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 375px) {
+    .phone {
+        top: 3em;
+        right: 5%;
+    }
+    .booking {
+        display: block;
+    }
+    .writing {
+        padding: 0 5px;
+    }
+    .title {
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 300px) {
+    .phone {
+        top: 2em;
+    }
+    .writing {
+        top: 15%;
+    }
+}
+@media (max-width: 260px) {
+    .subtitle {
+        font-size: 0.7em;
+    }
+}
